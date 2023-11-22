@@ -22,7 +22,7 @@ The [Mask-RCNN_TF2.14.0](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0-keras2
 2. OS -  `Linux 5.15.120+, Ubuntu20.04, Windows 10 and Windows 11`
 3. Cloud - `Google colab`
    
-**Note: This repo does not support any of the available versions of TensorFlow 1.x.**
+**Note: This repo does not support any of the available versions of TensorFlow 1.x. The code is documented and designed to be easy to extend. If you use it in your research, please make sure to cite the original paper and the repository ([bibtex below](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0/tree/main#citation)).**
 
 # Use the Repository Without Installation
 It is not required to build the repo. It is enough to copy the `mrcnn` directory to where you are using it.
