@@ -32,7 +32,7 @@ Please follow these steps to use the repo for making predictions:
 1. Create a root directory (e.g. maskrcnn)
 2. Copy the [mrcnn](mcnn) directory inside the root directory. 
 3. Download the pre-trained MS COCO weights inside the root directory from this link: https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5
-4. Create a script for object detection and save it inside the root directory. This script is an example: samples/mrcnn-prediction.py. The next section will walkthrough this sample script.
+4. Create a script for object detection and save it inside the root directory. This script is an example: [mrcnn-prediction.py](mrcnn-prediction.py). The next section will walkthrough this sample script.
 5. Run the script.
 
 The directory tree of the repo is as follows:
