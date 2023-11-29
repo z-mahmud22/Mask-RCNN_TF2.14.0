@@ -16,13 +16,60 @@ Apart from that, this repository uses the same training and testing code as in t
 * Evaluation on MS COCO metrics (AP)
 * Example of training on your own dataset
 
-The [Mask-RCNN_TF2.14.0](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0-keras2.14.0) repo is tested with TensorFlow 2.14.0, Keras 2.14.0, and Python 3.10.12 for the following system specifications:
+## Requirements
+The [Mask-RCNN_TF2.14.0](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0) repo is tested with TensorFlow 2.14.0, Keras 2.14.0, and Python 3.10.12 for the following system specifications:
 
 1. GPU - `GeForce RTX 3060 12GiB` , `Tesla T4 16GiB` (Google colab)
 2. OS -  `Linux 5.15.120+, Ubuntu20.04, Windows 10 and Windows 11`
 3. Cloud - `Google colab`
+
+Other common packages required for this repo are listed in `requirements.txt` and `environment.yml`.
+
+### MS COCO Requirements:
+To train or test on MS COCO, you'll also need:
+* `pycocotools` (installation instructions below)
+* [MS COCO Dataset](http://cocodataset.org/#home)
+* Download the 5K [minival](https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0)
+  and the 35K [validation-minus-minival](https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0)
+  subsets. More details in the original [Faster R-CNN implementation](https://github.com/rbgirshick/py-faster-rcnn/blob/master/data/README.md). 
    
 **Note: This repo does not support any of the available versions of TensorFlow 1.x. The code is documented and designed to be easy to extend. If you use it in your research, please make sure to cite the original paper and the repository ([bibtex below](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0/tree/main#citation)).**
+
+## Installation
+**Recommended way:**
+
+1. Clone this repository
+   ```bash
+   git clone https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0.git maskrcnn
+   ```
+
+2. Create environment with anaconda and install dependencies:
+   ```bash
+   conda env create -f environment.yml 
+   ```
+3. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5).
+   
+**Alternative way:**
+
+1. Clone this repository
+   ```bash
+   git clone https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0.git maskrcnn
+   ```
+   
+2. Install dependencies
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+3. Run setup from the repository root directory
+    ```bash
+    python3 setup.py install
+    ```
+4. Download pre-trained MS COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5).
+
+5. (Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
+    * Linux: https://github.com/waleedka/coco
+    * Windows: https://github.com/philferriere/cocoapi.
+    You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
 
 # Use the Repository Without Installation
 It is not required to build the repo. It is enough to copy the `mrcnn` directory to where you are using it.
@@ -250,53 +297,6 @@ Contributions to this repository are welcome. Examples of things you can contrib
 * Accuracy Improvements.
 * Visualizations and examples.
 * Update the TF-1 docker image to support TF-2 implementation
-
-## Requirements
-Python 3 (tested on Python 3.10.12), TensorFlow 2.14.0, Keras 2.14.0-tf and other common packages listed in `requirements.txt` and `environment.yml`.
-
-### MS COCO Requirements:
-To train or test on MS COCO, you'll also need:
-* pycocotools (installation instructions below)
-* [MS COCO Dataset](http://cocodataset.org/#home)
-* Download the 5K [minival](https://dl.dropboxusercontent.com/s/o43o90bna78omob/instances_minival2014.json.zip?dl=0)
-  and the 35K [validation-minus-minival](https://dl.dropboxusercontent.com/s/s3tw5zcg7395368/instances_valminusminival2014.json.zip?dl=0)
-  subsets. More details in the original [Faster R-CNN implementation](https://github.com/rbgirshick/py-faster-rcnn/blob/master/data/README.md).
-  
-## Installation
-**Recommended way:**
-
-1. Clone this repository
-   ```bash
-   git clone https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0.git
-   ```
-
-2. Create environment with anaconda and install dependencies:
-   ```bash
-   conda env create -f environment.yml 
-   ```
-3. Download pre-trained COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5).
-   
-**Alternative way:**
-
-1. Clone this repository
-   ```bash
-   git clone https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0.git
-   ```
-   
-2. Install dependencies
-   ```bash
-   pip3 install -r requirements.txt
-   ```
-3. Run setup from the repository root directory
-    ```bash
-    python3 setup.py install
-    ```
-4. Download pre-trained MS COCO weights (mask_rcnn_coco.h5) from the [releases page](https://github.com/matterport/Mask_RCNN/releases/download/v2.0/mask_rcnn_coco.h5).
-
-(Optional) To train or test on MS COCO install `pycocotools` from one of these repos. They are forks of the original pycocotools with fixes for Python3 and Windows (the official repo doesn't seem to be active anymore).
-    * Linux: https://github.com/waleedka/coco
-    * Windows: https://github.com/philferriere/cocoapi.
-    You must have the Visual C++ 2015 build tools on your path (see the repo for additional details)
 
 # Projects Using this Model
 ### [4K Video Demo](https://www.youtube.com/watch?v=OOT3UIXZztE) by Karol Majek.
