@@ -5,19 +5,22 @@ dependencies:
   - pip=23.3
   - python=3.10.12
   - pip:
-      - cython==3.0.5
-      - h5py==3.9.0
-      - imgaug==0.4.0
-      - ipython==7.34.0
+      - cython==3.0.8
       - ipython-genutils==0.2.0
       - ipython-sql==0.5.0
-      - keras==2.14.0
-      - matplotlib==3.7.1
-      - numpy==1.23.5
-      - opencv-contrib-python==4.8.0.76
-      - opencv-python==4.8.0.76
-      - pillow==9.4.0
-      - scikit-image==0.19.3
-      - scipy==1.11.3
-      - tensorboard==2.14.1
-      - tensorflow==2.14.0
+      - pillow==10.2.0
+      - h5py==3.10.0
+      - imgaug==0.4.0
+      - ipython==8.21.0
+      - keras==2.15.0
+      - matplotlib==3.8.2
+      - numpy==1.26.3
+      - opencv_contrib_python==4.9.0.80
+      - opencv_python==4.9.0.80
+      - pip==23.3.1
+      - pycocotools==2.0.7
+      - scipy==1.12.0
+      - setuptools==68.2.2
+      - scikit-image==0.22.0
+      - tensorflow==2.15.0
+      - tensorboard==2.15.1
