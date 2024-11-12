@@ -13,4 +13,4 @@ pillow==9.4.0
 scikit-image==0.19.3
 scipy==1.11.3
 tensorboard==2.14.1
-tensorflow==2.14.0
+tensorflow[and-cuda]==2.14.0
