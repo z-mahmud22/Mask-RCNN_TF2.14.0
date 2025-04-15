@@ -17,7 +17,7 @@ Apart from that, this repository uses the same training and testing code as in t
 * Example of training on your own dataset
 
 ## Requirements
-The [Mask-RCNN_TF2.14.0](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0) repo is tested with TensorFlow 2.14.0, Keras 2.14.0, and Python 3.10.12 for the following system specifications:
+The [Mask-RCNN_TF2.14.0](https://github.com/z-mahmud22/Mask-RCNN_TF2.14.0) repo is tested with TensorFlow 2.14.0, Keras 2.14.0, and Python 3.10 for the following system specifications:
 
 1. GPU - `GeForce RTX 3060 12GiB` , `Tesla T4 16GiB` (Google colab)
 2. OS -  `Linux 5.15.120+, Ubuntu20.04, Windows 10 and Windows 11`
