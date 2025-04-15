@@ -3,7 +3,7 @@ channels:
   - defaults
 dependencies:
   - pip=23.3
-  - python=3.10.12
+  - python=3.10
   - pip:
       - cython==3.0.5
       - h5py==3.9.0
